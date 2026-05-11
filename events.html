@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+<style>
+.contact-container{
+max-width:700px;
+margin:60px auto;
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 24px rgba(0,0,0,0.12);
+}
+
+.contact-container h2{
+text-align:center;
+margin-bottom:30px;
+color:#1e3a8a;
+font-size:32px;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.contact-form label{
+font-weight:bold;
+color:#333;
+margin-bottom:6px;
+display:block;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:14px;
+border:1px solid #cbd5e1;
+border-radius:12px;
+font-size:16px;
+box-sizing:border-box;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border-color:#2563eb;
+box-shadow:0 0 0 4px rgba(37,99,235,0.15);
+}
+
+.contact-form textarea{
+height:160px;
+resize:vertical;
+}
+
+.contact-form button{
+background:linear-gradient(135deg,#2563eb,#1e40af);
+color:white;
+border:none;
+padding:14px;
+font-size:17px;
+font-weight:bold;
+border-radius:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+transform:translateY(-2px);
+opacity:0.92;
+}
+
+</style>
+
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+}
+
+.top-navbar{
+display:flex;
+justify-content:center;
+gap:15px;
+padding:18px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+border-radius:0 0 18px 18px;
+box-shadow:0 6px 18px rgba(0,0,0,0.18);
+flex-wrap:wrap;
+}
+
+.top-navbar a{
+text-decoration:none;
+color:white;
+padding:12px 22px;
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.2);
+border-radius:14px;
+font-weight:bold;
+transition:0.3s ease;
+backdrop-filter:blur(6px);
+}
+
+.top-navbar a:hover{
+background:white;
+color:#1e3a8a;
+transform:translateY(-2px) scale(1.03);
+}
+
+.hero-image{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:20px;
+margin:20px 0;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفعاليات</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="top-navbar">
+<a href="index.html">الرئيسية</a>
+<a href="events.html">الفعاليات</a>
+<a href="about.html">عن الموقع</a>
+<a href="contact.html">اتصل بنا</a>
+</div>
+<br>
+
+
+
+
+
+<div class="container section">
+  <h2 class="section-title">كل الفعاليات</h2>
+
+  <div class="mb-4">
+    <button class="btn btn-dark btn-filter" onclick="filterEvents('all')">الكل</button>
+    <button class="btn btn-primary btn-filter" onclick="filterEvents('tech')">تقنية</button>
+    <button class="btn btn-warning btn-filter" onclick="filterEvents('culture')">ثقافية</button>
+    <button class="btn btn-success btn-filter" onclick="filterEvents('academic')">أكاديمية</button>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4 event-card" data-cat="tech">
+      <div class="card">
+        <img src="assets\images\webimg.jpeg" width=900px>
+        <div class="card-body">
+          <h4>ورشة تطوير ويب</h4>
+          <p>برنامج تدريبي مكثف يغطي بناء واجهات حديثة وتحسين تجربة المستخدم.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 event-card" data-cat="culture">
+      <div class="card">
+        <img src="assets\images\we.jpeg" width=900px>
+        <div class="card-body">
+          <h4>معرض ثقافي</h4>
+          <p>عرض لمشاريع وأعمال الطلاب الفنية والإبداعية مع جلسات نقاشية.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 event-card" data-cat="academic">
+      <div class="card">
+        <img src="assets\images\pp.jpeg" width=900px>
+        <div class="card-body">
+          <h4>ندوة أكاديمية</h4>
+          <p>استضافة خبراء وأكاديميين لمناقشة أحدث الاتجاهات التعليمية الرقمية.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="mb-1">© 2026 دليل فعاليات الجامعة الافتراضية السورية</p>
+
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
